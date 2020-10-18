@@ -2,7 +2,7 @@
     display: flex;
 }
 .imgOffers img {
-    width: 500px;
+    height: 150px;
 }
 
 .moda {
@@ -18,7 +18,6 @@
     background-color: rgba(0,0,0,0.7);
     
 }
-
 .moda-content {
     width: 50%;
     border-radius: 5px;  
@@ -69,6 +68,9 @@ form>input{
 }
 .topTittle{
     margin-top: 10px;
+}
+.jumbotron{
+    position: sticky;
 }
 
 
