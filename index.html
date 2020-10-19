@@ -91,24 +91,27 @@
           <ol id="orders">
 
           </ol>
+          <div id="deliver">
+            <h6></h6>
+          </div>
           <div id="total">
             <h5></h5>
           </div>
-          <form class="form-group" action="Submit" id="formgroup">
+          <form class="form-group" action="#" id="formAddress">
             <input type="text" placeholder="Name" id="name">
-            <input type="text" placeholder="Phone Number" id="numb">
+            <input type="tel" id="numb" name="numb" placeholder="Enter your phone number">
+            <div id="loc">
+              <div class="location">
+                <input type="radio" name="locations" id="location1" value="0">
+                <label for="location1">CBD free</label>
+              </div>
+              <div class="location">  
+                <input type="radio" name="locations" id="location2" value="150">
+                <label for="location2">Outside CBD + Ksh <span>150</span></label>
+              </div> 
+            </div>  
             <input type="text"  id="estate" placeholder="Input area of Residence">
-            <div class="store">
-              <label for="estate"> Select store near you</label>
-              <select name="store" id="store">
-                <option value="CBD">CBD</option>
-                <option value="Westlands">Westlands</option>
-                <option value="Parklands">Parklands</option>
-                <option value="Dagoretti">Dagoretti</option>
-                <option value="Kasarani">Kasarani</option>
-                <option value="Langata">Langata</option>
-              </select>
-            </div>
+            
             <button type="submit" class="mybtn">Order now</button>
           </form>  
             
@@ -128,9 +131,9 @@
           </div>    
           <div class="links">
               <p>QUICK LINKS</p>
-              <p><a href="#">Webinars</a></p>
-              <p><a href="#">Blogs</a></p>
-              <p><a href="#">Our impact</a></p>
+              <p><a href="#">Menu</a></p>
+              <p><a href="#">Food Blogs</a></p>
+              <p><a href="#">Gallery</a></p>
               <p><a href="#">Activities</a></p>
           </div>  
           <div class="social"> 
@@ -153,6 +156,7 @@
               <h2>YUMMY PIZZA PLACE</h2>
               <div class="topTittle">
                 <p>Select your preferred toppings and pizza size</p>
+                <p>You can add multiple orders</p>
               </div>
               <div class="topping">
                 
@@ -247,34 +251,35 @@
                       </label>
                     </div>
                   </div>
-                </div>  
-              </div>
-              <div class="size">
-                Size: 
-                <div class="form-check">
-                  <div class="sizes">
-                    <input class="form-check-input" type="radio" name="grid" id="gridRadiosS1" value="small" checked>
-                    <label class="form-check-label" for="gridRadios1">
-                      Small
-                    </label>
-                  </div>  
-                  <div class="sizes">
-                    <input class="form-check-input" type="radio" name="grid" id="gridRadiosS2" value="medium">
-                    <label class="form-check-label" for="gridRadios2">
-                      Medium + KSH 400
-                    </label>
-                  </div>
-                  <div class="sizes">
-                    <input class="form-check-input" type="radio" name="grid" id="gridRadiosS3" value="large">
-                    <label class="form-check-label" for="gridRadios3">
-                      Large + KSH 800
-                    </label>
+                </div>
+                <div class="size">
+                  Size: 
+                  <div class="form-check">
+                    <div class="sizes">
+                      <input class="form-check-input" type="radio" name="grid" id="gridRadiosS1" value="small" checked>
+                      <label class="form-check-label" for="gridRadios1">
+                        Small
+                      </label>
+                    </div>  
+                    <div class="sizes">
+                      <input class="form-check-input" type="radio" name="grid" id="gridRadiosS2" value="medium">
+                      <label class="form-check-label" for="gridRadios2">
+                        Medium + KSH 400
+                      </label>
+                    </div>
+                    <div class="sizes">
+                      <input class="form-check-input" type="radio" name="grid" id="gridRadiosS3" value="large">
+                      <label class="form-check-label" for="gridRadios3">
+                        Large + KSH 800
+                      </label>
+                    </div>
                   </div>
                 </div>
+    
               </div>
-
+              
                 
-              <button type="submit" class="btn">Add</button>
+              <button type="submit" class="mybtn">Add</button>
           </form>
       </div>
     </div>  
