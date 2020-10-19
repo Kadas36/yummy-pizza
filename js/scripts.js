@@ -56,7 +56,36 @@ $(document).ready(function() {
         $("#total h5").text("The total is: " + total);
     }); 
 
-       
+    $("#formAddress").submit(function(event) {
+        event.preventDefault();
 
+       let inputtedLocation = $("[name='locations']:checked").val();
+       let inputtedName = $("#name").val();
+       let inputtedNumber = $("#numb").val();
+       let inputtedEstate = $("#estate").val();
+
+       let valueRaw = $("#total").text().split(": ");
+       let valueDeliver = parseInt(valueRaw[1]);
+       let sumTotal = valueDeliver+150
+    
+
+       if(inputtedLocation == "150" && inputtedEstate !== ""){
+            $("#deliver h6").text("Hello! Your Delivery to " + inputtedEstate + " Will be confirmed as soon as payment is done.");           
+            $("#total h5").text("Totals to: " + sumTotal);
+            alert("We have received your order. Pay the amount tagged Total. Keep YUMMY")
+
+        }
+        else if(inputtedLocation == "150" && inputtedEstate == ""){
+            alert("input delivery location!")
+        }
+       else {
+            $("#deliver h6").text("");  
+       } 
+
+       $("form").trigger("reset");
+
+    
+
+    });    
 
 });
