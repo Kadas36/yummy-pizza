@@ -6,18 +6,14 @@
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/jquery-3.5.1.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script> 
     <title>pizza</title>
 </head>
 <body>
   <div class="container-fluid">
-    <!-- <div class="offers">
-      <h1>OUR OFFERS</h1>
-      <div class="imgOffers">
-        <img src="images/tuesday.png" alt="Promo">
-        <img src="images/pm2.jpg" alt="promo">
-        <img src="images/pm3.jpeg" alt="promo">
-      </div> -->
+    <div class="home">
+      <h1>YUMMY PIZZA PLACE</h1>
+      <h4>TWO PIECES ARE BETTER THAN ONE</h4>
     </div>
     <div class="row">
       <div class="col-md-8">
@@ -26,13 +22,45 @@
             <a href="">
               <img src="images/pork.jpeg" alt="pork pizza" >
               <div class="caption" >
-                <h3>Pork pizza Ksh 500</h3>
+                <h3>pepperoni BBQ</h3>
               </div>
             </a>
           </div>
           <div class="thumbnail">
             <a href="">
               <img src="images/pepperoni.jpeg" alt="pepperoni" >
+              <div class="caption">
+                <p>pepperoni</p>
+              </div>
+            </a>
+          </div>
+          <div class="thumbnail">
+            <a href="">
+              <img src="images/no meat1.png" alt="no-meat pizza" >
+              <div class="caption">
+                <p>no-meat pizza</p>
+              </div>
+            </a>
+          </div>
+          <div class="thumbnail">
+            <a href="">
+              <img src="images/meatball.jpeg" alt="no-meat pizza" >
+              <div class="caption">
+                <p>no-meat pizza</p>
+              </div>
+            </a>
+          </div>
+          <div class="thumbnail">
+            <a href="">
+              <img src="images/no meat1.png" alt="no meat pizza" >
+              <div class="caption" >
+                <h3>Pork pizza Ksh500</h3>
+              </div>
+            </a>
+          </div>
+          <div class="thumbnail">
+            <a href="">
+              <img src="images/home.jpg" alt="pepperoni" >
               <div class="caption">
                 <p>pepperoni</p>
               </div>
@@ -63,12 +91,61 @@
           <ol id="orders">
 
           </ol>
-          <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Order Now</a>
-          </p>
+          <div id="total">
+            <h5></h5>
+          </div>
+          <form class="form-group" action="Submit" id="formgroup">
+            <input type="text" placeholder="Name" id="name">
+            <input type="text" placeholder="Phone Number" id="numb">
+            <input type="text"  id="estate" placeholder="Input area of Residence">
+            <div class="store">
+              <label for="estate"> Select store near you</label>
+              <select name="store" id="store">
+                <option value="CBD">CBD</option>
+                <option value="Westlands">Westlands</option>
+                <option value="Parklands">Parklands</option>
+                <option value="Dagoretti">Dagoretti</option>
+                <option value="Kasarani">Kasarani</option>
+                <option value="Langata">Langata</option>
+              </select>
+            </div>
+            <button type="submit" class="mybtn">Order now</button>
+          </form>  
+            
         </div>
       </div> 
-    </div>    
+    </div>  
+    <footer>
+      <div class="footerA">
+          <div class="footer1">
+            <div class="address">
+              <p>YUMMY PIZZA PLACE</p>
+              <p>Moringa Plaza</p>
+              <p>Moringa Close,</p>
+              <p>P.O. Box 105476-00100,</p>
+              <p>Nairobi, Kenya</p>
+           </div>
+          </div>    
+          <div class="links">
+              <p>QUICK LINKS</p>
+              <p><a href="#">Webinars</a></p>
+              <p><a href="#">Blogs</a></p>
+              <p><a href="#">Our impact</a></p>
+              <p><a href="#">Activities</a></p>
+          </div>  
+          <div class="social"> 
+              <p>WE ARE SOCIAL</p>
+              <div class="socialmedia">
+                  <a href="#"><img src="images/rsz_icontwitter.png" alt="Twitter icon" id="twitter"></a>
+                  <a href="#"><img src="images/rsz_iconinstagram.png" alt="Facebook icon" id="facebook"></a>
+                  <a href="#"><img src="images/rsz_iconfacebook.png" alt="Instagram icon" id="insta"></a>
+              </div>              
+          </div>
+      </div>
+      <div id="footerB">
+          <p>© 2020 All rights reserved</p>
+      </div>
+    </footer>  
     <div id="myModa" class="moda">
       <div class="moda-content">
           <span class="close">&times;</span>
@@ -78,6 +155,36 @@
                 <p>Select your preferred toppings and pizza size</p>
               </div>
               <div class="topping">
+                
+                <div class="cheeseMain">
+                  Meat
+                  <div class="form-check">
+                    <div class="sauce">
+                      <input class="form-check-input" type="radio" name="cheese" id="meat" value="meatballs 530" checked>
+                      <label class="form-check-label" for="gridRadiosc1">
+                        Meat balls- small ksh 530
+                      </label>
+                    </div>  
+                    <div class="sauce">
+                      <input class="form-check-input" type="radio" name="cheese" id="meat1" value="chicken 500">
+                      <label class="form-check-label" for="gridRadiosc2">
+                        Chicken- small ksh 500
+                      </label>
+                    </div>
+                    <div class="sauce">
+                      <input class="form-check-input" type="radio" name="cheese" id="meat2" value="pepperoni 550">
+                      <label class="form-check-label" for="gridRadiosc3">
+                        Pepperoni- small ksh 550
+                      </label>
+                    </div>
+                    <div class="sauce">
+                      <input class="form-check-input" type="radio" name="cheese" id="mear3" value="No 450">
+                      <label class="form-check-label" for="gridRadiosc3">
+                        No-meat- small ksh 450
+                      </label>
+                    </div>
+                  </div>
+                </div>
                 <div class="sauceMain">
                   SAUCE
                   <div class="form-check">
@@ -97,29 +204,6 @@
                       <input class="form-check-input" type="radio" name="sauce" id="sauce3" value="No" checked>
                       <label class="form-check-label" for="sauce3">
                         No sauce
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="cheeseMain">
-                  Cheese
-                  <div class="form-check">
-                    <div class="sauce">
-                      <input class="form-check-input" type="radio" name="cheese" id="gridRadiosc1" value="Ricotta">
-                      <label class="form-check-label" for="gridRadiosc1">
-                        Ricotta
-                      </label>
-                    </div>  
-                    <div class="sauce">
-                      <input class="form-check-input" type="radio" name="cheese" id="gridRadios1" value="Mozzarella">
-                      <label class="form-check-label" for="gridRadiosc2">
-                        Mozzarella
-                      </label>
-                    </div>
-                    <div class="sauce">
-                      <input class="form-check-input" type="radio" name="cheese" id="gridRadiosc3" value="No" checked>
-                      <label class="form-check-label" for="gridRadiosc3">
-                        No cheese
                       </label>
                     </div>
                   </div>
@@ -196,10 +280,6 @@
     </div>  
    
   </div>   
-
-
-
-  
-<script src="js/script.js"></script>  
+  <script src="./js/script.js"></script>
 </body>
 </html>

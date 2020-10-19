@@ -1,10 +1,111 @@
-.imgOffers{
-    display: flex;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-.imgOffers img {
-    height: 150px;
+.home{
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(131, 90, 90, 1) ), url(../images/home.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.home h1{
+    padding-top: 200px;
+    padding-bottom: 15px;
+}
+.home h4{
+    padding-bottom: 150px;
+}
+a img{
+    width: 200px;
+    height: 180px;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+.thumbnail{
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    border-radius: 50px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
 }
 
+.footerA{
+    display: inherit;
+    justify-content: space-between;
+    background-color:  #47525d;
+    color: #ffffff;
+    flex-wrap: wrap;
+}
+
+.footer1{
+    display: inherit;
+}
+
+.footer1{
+    height: 100px;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#footerB{
+    color:#ffffff;
+    background-color: #3d464d;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.links>p{
+    margin: 5px auto;
+    color:white;
+}
+
+.address>p{
+    margin: 5px auto;
+} 
+.address{
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.social, .links{
+    margin-right: 150px;
+    margin-top: 10px;
+    color: white;
+}
+
+.socialmedia{
+    display: flex;
+    align-items: center;
+}
+
+#twitter, #facebook, #insta{
+    height: 30px;
+    width: 30px;
+    margin: 10px 10px 10px auto;
+} 
+ 
+.button{
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    width: 14em;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .moda {
     /* display: none; */
     position: fixed;
@@ -19,7 +120,7 @@
     
 }
 .moda-content {
-    width: 50%;
+    width: 70%;
     border-radius: 5px;  
     background-color: #fefefe;
     background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(131, 90, 90, 1) ), url(../images/h4.webp);
@@ -64,13 +165,21 @@ form>input{
     display: flex;
 }
 .sauce{
-    margin-left: 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
 .topTittle{
     margin-top: 10px;
 }
 .jumbotron{
     position: sticky;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group input{
+    margin-bottom: 10px;
 }
 
 

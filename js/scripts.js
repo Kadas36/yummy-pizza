@@ -7,15 +7,7 @@ function Order(sauce, cheese, veg, base, size) {
 }
 
 Order.prototype.specs = function() {
-    return this.Size + " sized pizza with " + this.Sauce + " sauce, " + this.Cheese + " cheese, " + this.Veggy + " veggies, and a " + this.Base + " crust.";
-}
-
-function resetForm() {
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-    $("input.new-street").val("");
-    $("input.new-city").val("");
-    $("input.new-county").val("");
+    return this.Size + " sized " + this.Cheese + " pizza with " + this.Sauce + " sauce," + this.Veggy + " veggies, and a " + this.Base + " crust.";
 }
 
 
@@ -26,14 +18,15 @@ $(document).ready(function() {
         event.preventDefault();
         
         let inputtedSauce = $("[name='sauce']:checked").val();
-        let inputtedCheese = $("[name='cheese']:checked").val();
         let inputtedVeggy = $("[name='veggy']:checked").val();
         let inputtedBase = $("[name='base']:checked").val();
         let inputtedSize = $("[name='grid']:checked").val();
-
+        let inputtedRawMeat = $("[name='cheese']:checked").val().split(" ");
+        let inputtedCheese = inputtedRawMeat[0];
+        let pizzaPrice = parseInt(inputtedRawMeat[1]);
+        
         let newOrder = new Order(inputtedSauce, inputtedCheese, inputtedVeggy, inputtedBase, inputtedSize);
 
-        let pizzaPrice = 500
         if(inputtedSize === "large"){
             pizzaPrice = pizzaPrice + 800
         }  
@@ -51,19 +44,20 @@ $(document).ready(function() {
             pizzaPrice = pizzaPrice
         }
 
-        $("ol#orders").append("<li><span class='orders'>" + newOrder.specs() + "<b> Cost is " + pizzaPrice + " </b>" + "</span></li>");
+        $("ol#orders").append("<li><span class='orders'>" + newOrder.specs() + "<b> Cost is " + " <span class='prices'>" + pizzaPrice + ",</span> " + " </b>" + "</span></li>");
         
-        console.log(pizzaPrice)
+        let priceArray1 = $("#orders .prices").text().split(",");
+        console.log(priceArray1)
+        let total = 0;
+        for(let i = 0; i <= priceArray1.length-2; i = i+1){
+            total = total + parseInt(priceArray1[i]);
+            console.log(total)
+        }
 
-
-      
-  
-        $(".thumbnail").click(function(event) {
-            event.preventDefault();
-            let pizza = $(this).text();
-        });
-    
-    
+        $("#total h5").text("The total is: " + total);
     }); 
+
+       
+
 
 });
