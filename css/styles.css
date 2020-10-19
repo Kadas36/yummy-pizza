@@ -97,7 +97,7 @@ footer{
     margin: 10px 10px 10px auto;
 } 
  
-.button{
+button{
     margin-bottom: 10px;
     padding: 20px;
     background-color: blue;
@@ -129,7 +129,8 @@ footer{
     padding: 20px;
     border: 1px solid #888;
     color:#fefefe;
-    font-weight: bolder;
+    font-weight: bold;
+    font-size: 15px;
 }
   
 .close {
@@ -163,23 +164,29 @@ form>input{
 }
 .topping{
     display: flex;
+    flex-wrap: wrap;
 }
 .sauce{
-    margin-left: 15px;
     margin-bottom: 10px;
 }
 .topTittle{
     margin-top: 10px;
 }
 .jumbotron{
-    position: sticky;
+    width: 100%;
 }
 .form-group{
     display: flex;
     flex-direction: column;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .form-group input{
     margin-bottom: 10px;
+}
+.veggyMain, .cheeseMain{
+    padding-left: 20px;
 }
 
 
