@@ -47,11 +47,10 @@ $(document).ready(function() {
         $("ol#orders").append("<li><span class='orders'>" + newOrder.specs() + "<b> Cost is " + " <span class='prices'>" + pizzaPrice + ",</span> " + " </b>" + "</span></li>");
         
         let priceArray1 = $("#orders .prices").text().split(",");
-        console.log(priceArray1)
+    
         let total = 0;
         for(let i = 0; i <= priceArray1.length-2; i = i+1){
             total = total + parseInt(priceArray1[i]);
-            console.log(total)
         }
 
         $("#total h5").text("The total is: " + total);
